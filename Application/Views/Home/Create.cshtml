@@ -1,0 +1,102 @@
+﻿@model Application.Models.Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>University Admition Form</h2>
+
+@using (Html.BeginForm())
+{
+    @*@Html.AntiForgeryToken()*@
+
+    @Html.LabelFor(model => model.studentName) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.studentName)
+    @Html.ValidationMessageFor(model => model.studentName,"", new { @class = "text-danger" })
+
+    @*<label for="studentName">Student Name</label>
+        <input class="text-box single-line" data-val="true" data-val-required="The Student Name field is required." id="studentName" name="studentName" type="text" value="">
+        <span class="field-validation-valid" data-valmsg-for="studentName" data-valmsg-replace="true"></span>*@
+    <br />
+    @Html.LabelFor(model => model.fatherName) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.fatherName)
+    @Html.ValidationMessageFor(model => model.fatherName, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.fatherOccupation) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.fatherOccupation)
+    @Html.ValidationMessageFor(model => model.fatherOccupation, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.motherName) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.motherName)
+    @Html.ValidationMessageFor(model => model.motherName, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.motherOccupation) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.motherOccupation)
+    @Html.ValidationMessageFor(model => model.motherOccupation, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.dateOfBirth) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.dateOfBirth)
+    @Html.ValidationMessageFor(model => model.dateOfBirth, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.presentAddress) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.presentAddress)
+    @Html.ValidationMessageFor(model => model.presentAddress, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.permanentAddresses) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.permanentAddresses)
+    @Html.ValidationMessageFor(model => model.permanentAddresses, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.fatherMobileNumber) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.fatherMobileNumber)
+    @Html.ValidationMessageFor(model => model.fatherMobileNumber, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.motherMobileNumber) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.motherMobileNumber)
+    @Html.ValidationMessageFor(model => model.motherMobileNumber, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.legalGuardianName) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.legalGuardianName)
+    @Html.ValidationMessageFor(model => model.legalGuardianName, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.legalGuardianRelation) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.legalGuardianRelation)
+    @Html.ValidationMessageFor(model => model.legalGuardianRelation, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.legalGuardianOccupation) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.legalGuardianOccupation)
+    @Html.ValidationMessageFor(model => model.legalGuardianOccupation, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.legalGuardianMobileNumber) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.legalGuardianMobileNumber)
+    @Html.ValidationMessageFor(model => model.legalGuardianMobileNumber, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.nameOfTheUniversityPreviousStudied) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.nameOfTheUniversityPreviousStudied)
+    @Html.ValidationMessageFor(model => model.nameOfTheUniversityPreviousStudied, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.NOCnumber) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.NOCnumber)
+    @Html.ValidationMessageFor(model => model.NOCnumber, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.NOCdate) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.NOCdate)
+    @Html.ValidationMessageFor(model => model.NOCdate, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.theClassThatWantsToBeAdmitted) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.theClassThatWantsToBeAdmitted)
+    @Html.ValidationMessageFor(model => model.theClassThatWantsToBeAdmitted, "", new { @class = "text-danger" })
+    @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.LabelFor(model => model.admitionDate) @Html.Raw("&nbsp;&nbsp;&nbsp;")
+    @Html.EditorFor(model => model.admitionDate)
+    @Html.ValidationMessageFor(model => model.admitionDate, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" value="Create" />
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@

@@ -1,0 +1,175 @@
+﻿@model IEnumerable<Application.Models.Student>
+
+
+
+<h2>Student Admission Information</h2>
+
+@if (TempData["InsertMassage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>@TempData["InsertMassage"]</p>
+        <hr>
+    </div>
+}
+
+@if (TempData["UpdateMassage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>@TempData["UpdateMassage"]</p>
+        <hr>
+    </div>
+}
+
+@if (TempData["DeleteMassage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>@TempData["DeleteMassage"]</p>
+        <hr>
+    </div>
+}
+
+<p>
+    @Html.ActionLink("University Admition Application", "Create", "Home")
+</p>
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.studentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fatherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fatherOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.presentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permanentAddresses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fatherMobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherMobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legalGuardianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legalGuardianRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legalGuardianOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legalGuardianMobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nameOfTheUniversityPreviousStudied)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOCnumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOCdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.theClassThatWantsToBeAdmitted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.admitionDate)
+        </th>
+        <th>Operations</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.studentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fatherOccupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motherOccupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.presentAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.permanentAddresses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fatherMobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motherMobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalGuardianName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalGuardianRelation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalGuardianOccupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalGuardianMobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameOfTheUniversityPreviousStudied)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOCnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOCdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.theClassThatWantsToBeAdmitted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.admitionDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) 
+                <br/>
+                @Html.ActionLink("Details", "Details", new { id = item.id }) 
+                <br/>
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,177 @@
+﻿@model Application.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.studentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fatherOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fatherOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motherOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motherOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.presentAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.presentAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.permanentAddresses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.permanentAddresses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fatherMobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fatherMobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motherMobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motherMobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legalGuardianName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legalGuardianName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legalGuardianRelation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legalGuardianRelation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legalGuardianOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legalGuardianOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legalGuardianMobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legalGuardianMobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nameOfTheUniversityPreviousStudied)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameOfTheUniversityPreviousStudied)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOCnumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOCnumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOCdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOCdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.theClassThatWantsToBeAdmitted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theClassThatWantsToBeAdmitted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admitionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admitionDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
